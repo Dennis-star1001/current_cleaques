@@ -5,8 +5,19 @@ import serviceIcon from '../../../../assets/service.svg';
 import handMoney from '../../../../assets/money.svg';
 import ticket from '../../../../assets/ticket-2 (2).svg';
 import DonationWallet from './DonationWallet';
+import { useEffect, useState } from 'react';
 
 const VendorDonationPage = () => {
+  const [catergories, setCatergory] = useState<Array<string>>([]);
+  useEffect(() => {
+    const headers = { 'Authorization': "81|bvMXD0AEGCYnNzEnUIkA3xBr4TikGd9U73iAvZY9eaeaec5f" };
+    fetch('https://api.cleaques.com/api/donation/category', { headers })
+            .then(response => response.json())
+            .then(data => setCatergory(data));
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
   return (
     <>
       <DashboardHeader />
