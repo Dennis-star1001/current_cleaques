@@ -45,12 +45,12 @@ const Donations = () => {
     const headers = { 'Authorization': "72|8BEs1nFKdhSbWm4jnHdMJ14fibWnD4Oip46HvwPd9592f2f7" };
     fetch('https://api.cleaques.com/api/donation/category', { headers })
             .then(response => response.json())
-            .then(data => setCatergory(data));
+            .then(data => setCatergory(data.data.donation_types));
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    console.log("Product",catergories.data.donation_types)
+    console.log("Product",catergories)
   return (
     <Box bg='#0D0D0D1A' px={padding}>
       <Center display='flex' p='10' px={spacing} sx={{ svg: { fontSize: '20px' } }}>
@@ -99,8 +99,8 @@ const Donations = () => {
       <Box m='4'>
         <SimpleGrid columns={[2,4,7]}>
 
-        {catergories.data.donation_types.length > 0 ? (
-          catergories.data.donation_types.map((item:any, i:any) => (
+        {catergories.length > 0 ? (
+          catergories.map((item:any, i:any) => (
 
           <Link href={`${item.name}`} key={item.id} justifyContent='space-around'>
             <Box
