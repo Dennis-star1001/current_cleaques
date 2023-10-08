@@ -7,3 +7,6 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+interface BEARER_TOKEN {
+  readonly BEARER_TOKEN : string;
+}

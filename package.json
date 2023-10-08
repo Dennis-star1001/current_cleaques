@@ -22,6 +22,7 @@
     "@fontsource/open-sans": "^5.0.9",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/react-redux": "^7.1.26",
+    "axios": "^1.5.1",
     "flag-icons": "^6.11.0",
     "formik": "^2.2.9",
     "framer-motion": "^10.16.1",

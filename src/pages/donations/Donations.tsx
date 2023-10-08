@@ -19,6 +19,7 @@ import {
   SimpleGrid
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
+import { useEffect, useState } from 'react';
 
 interface EventLink {
   link: string;
@@ -39,6 +40,17 @@ const padding = [4, '50px'];
 const spacing = [4, 5];
 const Donations = () => {
   const navigate = useNavigate();
+  const [catergories, setCatergory] = useState<Array<string>>([]);
+  useEffect(() => {
+    const headers = { 'Authorization': "72|8BEs1nFKdhSbWm4jnHdMJ14fibWnD4Oip46HvwPd9592f2f7" };
+    fetch('https://api.cleaques.com/api/donation/category', { headers })
+            .then(response => response.json())
+            .then(data => setCatergory(data));
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    console.log("Product",catergories.data.donation_types)
   return (
     <Box bg='#0D0D0D1A' px={padding}>
       <Center display='flex' p='10' px={spacing} sx={{ svg: { fontSize: '20px' } }}>
@@ -86,9 +98,11 @@ const Donations = () => {
       </Box>
       <Box m='4'>
         <SimpleGrid columns={[2,4,7]}>
-        {eventLinks.map((eventLink, i) => (
 
-          <Link href={eventLink.link} key={`eventlink_${i}`} justifyContent='space-around'>
+        {catergories.data.donation_types.length > 0 ? (
+          catergories.data.donation_types.map((item:any, i:any) => (
+
+          <Link href={`${item.name}`} key={item.id} justifyContent='space-around'>
             <Box
               m='4'
               p='4'
@@ -101,10 +115,11 @@ const Donations = () => {
               fontSize='15px'
               lineHeight='34.5px'
               >
-              {eventLink.name}
+              {item.name}
             </Box>
           </Link>
-        ))}
+          ))):""
+        }
         </SimpleGrid>
       </Box>
       <Box m='4'>
