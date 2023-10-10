@@ -16,7 +16,7 @@ const CreateVendorDonation = () => {
     });
 
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (event:any) => {
         const { name, value } = event.target;
         setData((prevData) => ({
             ...prevData,
@@ -34,21 +34,21 @@ const CreateVendorDonation = () => {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-console.log(event)
-        const endpointUrl = 'https://api.cleaques.com/api/vendor/donation/add'; 
+        console.log(event)
+        const endpointUrl = 'https://api.cleaques.com/api/vendor/donation/add';
 
         try {
             const response = await fetch(endpointUrl, {
                 method: 'POST',
                 headers: {
-                    'Authorization': `Bearer 81|bvMXD0AEGCYnNzEnUIkA3xBr4TikGd9U73iAvZY9eaeaec5f`, 
+                    'Authorization': `Bearer 81|bvMXD0AEGCYnNzEnUIkA3xBr4TikGd9U73iAvZY9eaeaec5f`,
                     'Content-Type': 'application/json',
-                  
+                    
                 },
                 body: JSON.stringify({ data }),
             });
 
-           
+
         } catch (error) {
             console.error('Error:', error);
             console.log('An error occurred while sending the request.');
@@ -56,7 +56,7 @@ console.log(event)
     };
     const padding = [4, '50px'];
     const spacing = [4, 5];
-console.log(data)
+    console.log(data)
     return (
         <Flex flexDirection={['column', 'row']} bg='#0D0D0D1A' gap='10' p='10' px={padding}>
             <Box>
@@ -85,7 +85,7 @@ console.log(data)
                         <option>Select an option</option>
                     </Select>
                 </FormControl>
-               
+
 
                 <FormControl>
                     <FormLabel>Donation title</FormLabel>

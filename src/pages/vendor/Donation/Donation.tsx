@@ -19,6 +19,7 @@ import {
     SimpleGrid
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
+import { useEffect, useState } from 'react';
 
 interface EventLink {
     link: string;
@@ -38,6 +39,16 @@ const eventLinks: EventLink[] = [
 const padding = [4, '50px'];
 const spacing = [4, 5];
 const VendorDonations = () => {
+    const [donation, setDonation] = useState<Array<string>>([]);
+    useEffect(() => {
+        const headers = { 'Authorization': `Bearer 81|bvMXD0AEGCYnNzEnUIkA3xBr4TikGd9U73iAvZY9eaeaec5f` };
+        fetch('https://api.cleaques.com/api/donation/category', { headers })
+                .then(response => response.json())
+                .then(data => setDonation(data));
+            
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, []);
+    console.log('donation',donation)
     const navigate = useNavigate();
     return (
         <Box bg='#0D0D0D1A' px={padding}>
