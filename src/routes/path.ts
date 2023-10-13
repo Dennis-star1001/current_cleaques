@@ -46,4 +46,9 @@ VENDOR_ACCOUNT_SETTINGS_SUBSCRIPTION:'/vendor/account-settings/subscription',
   US_ACCOUNT: '/us_account',
   SHARE_POINTS: '/share-points',
   BUY_MORE_POINTS: '/buy-more-points',
+
+
+  //ARTIST
+
+  ARTIST_MAIN_SCREEN:'/artist'
 };
