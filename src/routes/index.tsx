@@ -43,6 +43,11 @@ import VendorAccountChangePassword from '@/pages/vendor/AccountSettings/ChangePa
 import VendorAccountNotification from '@/pages/vendor/AccountSettings/Notification';
 import VendorAccountSubscription from '@/pages/vendor/AccountSettings/Subscription';
 import ArtistScreen from '@/pages/artist/ArtistScreen';
+import ArtistProfile from '@/pages/artist/ArtistProfile';
+import CreateSong from '@/pages/artist/components/createSong/SongType';
+import SongType from '@/pages/artist/components/createSong/SongType';
+import SongInfo from '@/pages/artist/components/createSong/SongInfo';
+import Checkout from '@/pages/artist/components/createSong/Checkout';
 export const router = createBrowserRouter([
   {
     path: path.HOME,
@@ -223,6 +228,23 @@ export const router = createBrowserRouter([
   {
     path: path.ARTIST_MAIN_SCREEN,
     element: <ArtistScreen />
+  },
+
+  {
+    path: path.ARTIST_PROFILE,
+    element: <ArtistProfile />
+  },
+  {
+    path:path.SONG_TYPE,
+    element:<SongType/>
+  },
+  {
+    path:path.SONG_INFO,
+    element:<SongInfo/>
+  },
+  {
+    path:path.CHECKOUT,
+    element:<Checkout/>
   }
 ]);
 

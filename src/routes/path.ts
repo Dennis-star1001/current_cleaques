@@ -50,5 +50,9 @@ VENDOR_ACCOUNT_SETTINGS_SUBSCRIPTION:'/vendor/account-settings/subscription',
 
   //ARTIST
 
-  ARTIST_MAIN_SCREEN:'/artist'
+  ARTIST_MAIN_SCREEN:'/artist',
+  ARTIST_PROFILE:'/artist-profile',
+  SONG_TYPE:'/create-song/song-type',
+  SONG_INFO:'/create-song/song-info',
+  CHECKOUT:'/create-song/checkout',
 };
