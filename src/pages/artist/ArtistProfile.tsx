@@ -6,6 +6,7 @@ import { BiChat } from "react-icons/bi";
 import MusicPlayer from "./components/MusicPlayer";
 import ArtistMusic from "./components/ArtistMusic";
 import Reviews from "./components/Review";
+import { Link } from "react-router-dom";
 const ArtistProfile = () => {
 
     const padding = [2, '50px'];
@@ -43,7 +44,9 @@ const ArtistProfile = () => {
                                     </Box>
                                     <Flex gap='5'>
                                         <Button bg='none'><BiChat size='28' color='#00B0F3' /></Button>
+                                        <Link to='/create-song/song-type'>
                                         <Button>Create my song</Button>
+                                        </Link>
                                     </Flex>
                                 </Flex>
                             </Flex>

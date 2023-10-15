@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Box, IconButton, Text, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Flex, Image, Button } from '@chakra-ui/react';
 import { FaPlay, FaPause, FaForward } from 'react-icons/fa';
 import DummyBanner from "../../../assets/dummy-banner.png"
-const MusicPlayer: React.FC = ({background}:any) => {
+import { Link } from 'react-router-dom';
+const MusicPlayer: React.FC = ({ background }: any) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [currentTime, setCurrentTime] = useState(0);
@@ -39,13 +40,13 @@ const MusicPlayer: React.FC = ({background}:any) => {
     return (
         <Box textAlign="center" w={'72'} bg={background || 'white'} px='5' py='5'>
             <Image
-            borderRadius={'full'}
-               w='20'
-               h='20'
+                borderRadius={'full'}
+                w='20'
+                h='20'
                 src={DummyBanner}
-              />
-                <Text fontWeight={'bold'} textAlign={'left'} fontSize="md">Artist Name</Text>
-           
+            />
+            <Text fontWeight={'bold'} textAlign={'left'} fontSize="md">Artist Name</Text>
+
             <Flex gap='3' py='5'>
                 <Text bg='#F1F5F9' px='3' borderRadius={'xl'} color='#00B0F3'>RnB</Text>
                 <Text bg='#F1F5F9' px='3' borderRadius={'xl'} color='#00B0F3'>Hip Hop</Text>
@@ -87,7 +88,9 @@ const MusicPlayer: React.FC = ({background}:any) => {
                     {audioRef.current ? Math.floor(audioRef.current.duration) : '0'}
                 </Text>
             </Flex>
-            <Button mt='5' px='10' fontSize={'sm'} h='fit-content'>View Profile</Button>
+            <Link to='/artist-profile'>
+                <Button mt='5' px='10' fontSize={'sm'} h='fit-content'>View Profile</Button>
+            </Link>
         </Box >
     );
 };

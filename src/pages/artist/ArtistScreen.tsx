@@ -30,7 +30,9 @@ const ArtistScreen = () => {
 
                     <Flex gap={'5'} alignItems={'center'} flexDirection='column' color={'white'} textAlign={'center'} position={'absolute'} bottom={'20'}>
                         <Text fontWeight={'bold'} fontSize={'4xl'}>Artists</Text>
-                        <Button w='40' fontSize={'sm'}>Create my song</Button>
+                        <Link to='/create-song/song-type'>
+                            <Button w='40' fontSize={'sm'}>Create my song</Button>
+                        </Link>
                         <Text fontSize={'sm'}>Create a song to celebrate that special occasion, person or event</Text>
                     </Flex>
                 </Center>
@@ -91,14 +93,14 @@ const ArtistScreen = () => {
                     </Box>
                 </Flex>
                 <Flex justifyContent={'center'}>
-                    <SimpleGrid spacing={'10'} columns={[1,4]}>
+                    <SimpleGrid spacing={'10'} columns={[1, 4]}>
 
-                    <MusicPlayer />
-                    <MusicPlayer />
-                    <MusicPlayer />
-                    <MusicPlayer />
-                    <MusicPlayer />
-                    <MusicPlayer />
+                        <MusicPlayer />
+                        <MusicPlayer />
+                        <MusicPlayer />
+                        <MusicPlayer />
+                        <MusicPlayer />
+                        <MusicPlayer />
                     </SimpleGrid>
                 </Flex>
             </Box>
