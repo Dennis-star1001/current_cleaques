@@ -55,4 +55,6 @@ VENDOR_ACCOUNT_SETTINGS_SUBSCRIPTION:'/vendor/account-settings/subscription',
   SONG_TYPE:'/create-song/song-type',
   SONG_INFO:'/create-song/song-info',
   CHECKOUT:'/create-song/checkout',
+  FINAL_CHECKOUT:'/create-song/final-checkout',
+  ARTIST_BOOKING:'/artist-booking',
 };

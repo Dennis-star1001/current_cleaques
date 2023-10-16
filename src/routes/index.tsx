@@ -44,10 +44,12 @@ import VendorAccountNotification from '@/pages/vendor/AccountSettings/Notificati
 import VendorAccountSubscription from '@/pages/vendor/AccountSettings/Subscription';
 import ArtistScreen from '@/pages/artist/ArtistScreen';
 import ArtistProfile from '@/pages/artist/ArtistProfile';
-import CreateSong from '@/pages/artist/components/createSong/SongType';
-import SongType from '@/pages/artist/components/createSong/SongType';
-import SongInfo from '@/pages/artist/components/createSong/SongInfo';
-import Checkout from '@/pages/artist/components/createSong/Checkout';
+import CreateSong from '@/pages/artist/createSong/SongType';
+import SongType from '@/pages/artist/createSong/SongType';
+import SongInfo from '@/pages/artist/createSong/SongInfo';
+import Checkout from '@/pages/artist/createSong/Checkout';
+import FinalCheckOut from '@/pages/artist/createSong/FinalCheckOut';
+import ArtistBooking from '@/pages/artist/ArtistBooking';
 export const router = createBrowserRouter([
   {
     path: path.HOME,
@@ -245,6 +247,14 @@ export const router = createBrowserRouter([
   {
     path:path.CHECKOUT,
     element:<Checkout/>
+  },
+  {
+    path:path.FINAL_CHECKOUT,
+    element:<FinalCheckOut/>
+  },
+  {
+    path:path.ARTIST_BOOKING,
+    element:<ArtistBooking/>
   }
 ]);
 
