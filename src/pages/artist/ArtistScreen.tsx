@@ -101,6 +101,8 @@ const ArtistScreen = () => {
                         <MusicPlayer />
                         <MusicPlayer />
                         <MusicPlayer />
+                        <MusicPlayer />
+                        <MusicPlayer />
                     </SimpleGrid>
                 </Flex>
             </Box>

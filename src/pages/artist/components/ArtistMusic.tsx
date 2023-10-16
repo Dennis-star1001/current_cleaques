@@ -46,7 +46,7 @@ const ArtistMusic: React.FC = ({ background }: any) => {
                     src={DummyBanner}
                 />
                 <Box>
-                    <Text fontWeight={'bold'} textAlign={'left'} fontSize="md">Artist Name</Text>
+                    <Text fontWeight={'bold'} textAlign={'left'} fontSize="md">Thanks ft J.cole</Text>
 
                     <Flex gap='3' fontSize={'sm'}>
                         <Text bg='#F1F5F9' py='1' px='3' borderRadius={'sm'} color='#00B0F3'>RnB</Text>

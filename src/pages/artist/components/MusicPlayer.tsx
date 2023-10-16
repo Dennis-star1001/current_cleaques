@@ -45,7 +45,7 @@ const MusicPlayer: React.FC = ({ background }: any) => {
                 h='20'
                 src={DummyBanner}
             />
-            <Text fontWeight={'bold'} textAlign={'left'} fontSize="md">Artist Name</Text>
+            <Text fontWeight={'bold'} textAlign={'left'} fontSize="md">Sarah Matthew P.K.A Sarah </Text>
 
             <Flex gap='3' py='5'>
                 <Text bg='#F1F5F9' px='3' borderRadius={'xl'} color='#00B0F3'>RnB</Text>
